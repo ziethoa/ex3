@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMACY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header>
+        <div class="navbar">
+            <div class="navbar-up">
+                <div class="logo-nav">
+                    <div class="menu" id="menuBtn"><i class="fa-solid fa-list"></i></div>
+                    <img src="assets/logo-header.png" alt="logo">
+                    <div class="nav-like-cart">
+                        <a href="#" class="like"><i class="fa-regular fa-heart"></i>
+                            <p class="amount">10</p>
+                        </a>
+                        <a href="Order.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                            <p class="amount">10</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-find-pro">
+                    <input type="search" name="product" placeholder="Tìm kiếm sản phẩm">
+                    <select name="classify" id="classify" class="nor-word">
+                        <option value="" style="display: none;">Phân loại sản phẩm</option>
+                        <option value="thiet-bi-y-te">Thiết bị y tế</option>
+                        <option value="duoc-pham">Dược phẩm</option>
+                        <option value="dung-cu-y-te">Dụng cụ y tế</option>
+                    </select>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-user">
+                    <div class="nav-like-cart">
+                        <a href="#" class="like"><i class="fa-regular fa-heart"></i>
+                            <p class="amount">10</p>
+                        </a>
+                        <a href="Order.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                            <p class="amount">10</p>
+                        </a>
+                    </div>
+                    <div class="nav-login-resgistor">
+                        <i class="fa-regular fa-user"></i>
+                        <div class="content">
+                            <p class="nor-word">My Account</p>
+                            <div>
+                                <a href="#" class="login nor-word">Đăng nhập</a>
+                                <span>/</span>
+                                <a href="#" class="registor nor-word">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-down" id="sideNav">
+                <div class="logo-close">
+                    <img src="assets/logo-header.png" alt="logo">
+                    <i class="fa-solid fa-xmark close" id="closeBtn"></i>
+                </div>
+                <div class="nav-login-resgistor">
+                    <i class="fa-regular fa-user"></i>
+                    <div class="content">
+                        <p class="nor-word">My Account</p>
+                        <div>
+                            <a href="#" class="login nor-word">Đăng nhập</a>
+                            <span>/</span>
+                            <a href="#" class="registor nor-word">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-category">
+                    <i class="fa-solid fa-list"></i>
+                    <select name="category" id="category-nav" class="nor-word">
+                        <option value="" style="display: none;">Danh mục sản phẩm</option>
+                        <option value="thiet-bi-y-te">Thiết bị y tế</option>
+                        <option value="duoc-pham">Dược phẩm</option>
+                        <option value="dung-cu-y-te">Dụng cụ y tế</option>
+                        <option value="my-pham">Mỹ phẩm</option>
+                        <option value="tp-chuc-nang">TP chức năng</option>
+                        <option value="tp-co-tre-em">TP cho trẻ em</option>
+                    </select>
+                </div>
+                <ul class="nav-function">
+                    <li><a href="index.html" class="nor-word">Trang Chủ</a></li>
+                    <li><a href="#" class="nor-word">Hoạt Chất</a></li>
+                    <li><a href="#" class="nor-word">Tìm Hiểu Bệnh</a></li>
+                    <li><a href="#" class="nor-word">Về Chúng Tôi</a></li>
+                    <li><a href="#" class="nor-word">Tin Tức</a></li>
+                    <li><a href="Order.html" class="nor-word active">Đặt Hàng Nhanh</a></li>
+                    <li><a href="Contact-us-1.html" class="nor-word">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="title-page">
+            <a href="index.html">
+                <h4>Trang chủ</h4>
+            </a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="Order.html">
+                <h4 class="active">Đặt hàng nhanh</h4>
+            </a>
+        </div>
+        <div class="add-to-cart">
+            <div class="cart-container">
+                <div class="cart-add-row product-row">
+                    <div class="cart-add-column">
+                        <label class="nor-word">Danh mục</label>
+                        <select id="category" class="nor-word">
+                            <option class="nor-word">Dược phẩm</option>
+                            <option class="nor-word">Thiết bị y tế</option>
+                            <option class="nor-word">Dụng cụ y tế</option>
+                            <option class="nor-word">Mỹ phẩm</option>
+                            <option class="nor-word">TP chức năng</option>
+                            <option class="nor-word">TP cho trẻ em</option>
+                        </select>
+                    </div>
+                    <div class="cart-add-column">
+                        <label class="nor-word">Tên sản phẩm</label>
+                        <select id="product-name" class="nor-word">
+                            <option class="nor-word">Vui lòng nhập tên sản phẩm</option>
+                            <option class="nor-word">Sản phẩm A</option>
+                            <option class="nor-word">Sản phẩm B</option>
+                        </select>
+                    </div>
+                    <div class="cart-add-column">
+                        <label class="nor-word">Hoạt chất</label>
+                        <select id="active-ingredient" class="nor-word">
+                            <option class="nor-word">Opioid</option>
+                            <option class="nor-word">Paracetamol</option>
+                        </select>
+                    </div>
+                    <div class="cart-add-column quantity">
+                        <label class="nor-word">Số lượng</label>
+                        <div class="quantity-control">
+                            <button class="quantity-btn decrease">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input" id="quantity">
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-add-column price">
+                        <label class="nor-word">Giá</label>
+                        <span class="nor-word value-price" id="price">0 VNĐ</span>
+                    </div>
+                </div>
+                <div id="error-message" style="color: red; display: none;"></div>
+            </div>
+            <div class="btn-add-to-cart">
+                <button onclick="addToCart()"><h4>Thêm vào danh sách</h4></button>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="order-list-container">
+                <h3>Danh Sách Đặt Hàng</h3>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th class="nor-word">Tên Sản Phẩm</th>
+                            <th class="nor-word non-active">Hoạt Chất</th>
+                            <th class="nor-word non-active">Hàm Lượng</th>
+                            <th class="nor-word non-active">Đvt</th>
+                            <th class="nor-word">Quy Cách</th>
+                            <th class="nor-word">Số Lượng</th>
+                            <th class="nor-word non-active-mobile">Nhà Sản Xuất</th>
+                            <th class="nor-word non-active">Nguồn Gốc</th>
+                            <th class="nor-word">Giá (VNĐ)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-table-body">
+                        <tr>
+                            <td class="nor-word">Fabamox 1000 DT</td>
+                            <td class="nor-word non-active">Amoxicillin</td>
+                            <td class="nor-word non-active">1000mg</td>
+                            <td class="nor-word non-active">Viên phân tán</td>
+                            <td class="nor-word">Hộp 3 vỉ x 7 viên</td>
+                            <td class="nor-word">1</td>
+                            <td class="nor-word non-active-mobile">Công ty cổ phần dược ABC - XYZ</td>
+                            <td class="nor-word non-active">Việt Nam</td>
+                            <td class="nor-word">4,500</td>
+                            <td><button class="delete-btn" onclick="deleteItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="nor-word">Imfed DT 875mg/125mg</td>
+                            <td class="nor-word non-active">Amoxicillin/ Clavulanic</td>
+                            <td class="nor-word non-active">875mg/125mg</td>
+                            <td class="nor-word non-active">Viên</td>
+                            <td class="nor-word">Hộp 7 vỉ x 2 viên</td>
+                            <td class="nor-word">1</td>
+                            <td class="nor-word non-active-mobile">Công ty cổ phần dược ABC - XYZ</td>
+                            <td class="nor-word non-active">Việt Nam</td>
+                            <td class="nor-word">17,000</td>
+                            <td><button class="delete-btn" onclick="deleteItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="nor-word">Imfed DT 250mg/31,25mg</td>
+                            <td class="nor-word non-active">Amoxicillin/ Clavulanic</td>
+                            <td class="nor-word non-active">875mg/31,25mg</td>
+                            <td class="nor-word non-active">Gói</td>
+                            <td class="nor-word">Hộp 12 gói</td>
+                            <td class="nor-word">1</td>
+                            <td class="nor-word non-active-mobile">Công ty cổ phần dược ABC - XYZ</td>
+                            <td class="nor-word non-active">Việt Nam</td>
+                            <td class="nor-word">7,500</td>
+                            <td><button class="delete-btn" onclick="deleteItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="nor-word">Katovastin 20</td>
+                            <td class="nor-word non-active">Atorvastatin</td>
+                            <td class="nor-word non-active">20mg</td>
+                            <td class="nor-word non-active">Viên (viên nén bao phim)</td>
+                            <td class="nor-word">Hộp 3 vỉ x 10 viên</td>
+                            <td class="nor-word">1</td>
+                            <td class="nor-word non-active-mobile">Công ty cổ phần dược ABC - XYZ</td>
+                            <td class="nor-word non-active">Việt Nam</td>
+                            <td class="nor-word">5,500</td>
+                            <td><button class="delete-btn" onclick="deleteItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8" class="total-label large-word desktop">Tổng cộng</td>
+                            <td colspan="4" class="total-label large-word ipad">Tổng cộng</td>
+                            <td colspan="3" class="total-label large-word iphone">Tổng cộng</td>
+                            <td id="total-price" class="total-price large-word">34,500</td>
+                            <td ></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="action-buttons">
+                <a href="#" ><button class="update-btn"><h4>Cập nhật</h4></button></a>
+                <a href="Payment.html" ><button class="proceed-btn"><h4>Tiến hành thanh toán</h4></button></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section class="footer">
+            <a href="index.html" class="icon-footer">
+                <img src="assets/icon-footer.png" alt="icon-footer">
+            </a>
+            <div class="contact-info-aboutus">
+                <div class="contact-info">
+                    <p class="title-footer large-word">Thông tin liên lạc</p>
+                    <ul class="text">
+                        <li><a href="#" class="phone-number large-word">0909 669 420</a></li>
+                        <li><a href="#" class="email-address large-word">Thuocchosi@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="about-us">
+                    <h4>Về chúng tôi</h4>
+                    <h4>Công Ty TNHH Thương Mại XYZ</h4>
+                    <h4>Địa chỉ: 48 Nguyễn Văn Quá, phường 3, Quận Gò Vấp, Tp HCM.</h4>
+                </div>
+            </div>
+            <div class="policy-security">
+                <p class="title-footer large-word">Chính sách và bảo mật</p>
+                <ul class="text">
+                    <li><a href="#">
+                            <h4>FAQS</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Điều khoản sử dụng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách giao hàng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách hoàn trả</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách bảo mật</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách người dùng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Theo dõi đơn hàng</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="payment-footer">
+                <p class="title-footer large-word">Phương thức thanh toán</p>
+                <div class="image-footer-payment">
+                    <img src="assets/visa.png" alt="visa">
+                    <img src="assets/mastercard.png" alt="mastercard">
+                    <img src="assets/googlepay.png" alt="googlepay">
+                    <img src="assets/paypal.png" alt="paypal">
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

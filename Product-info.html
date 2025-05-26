@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARMACY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <header>
+        <div class="navbar">
+            <div class="navbar-up">
+                <div class="logo-nav">
+                    <div class="menu" id="menuBtn"><i class="fa-solid fa-list"></i></div>
+                    <img src="assets/logo-header.png" alt="logo">
+                    <div class="nav-like-cart">
+                        <a href="#" class="like"><i class="fa-regular fa-heart"></i>
+                            <p class="amount">10</p>
+                        </a>
+                        <a href="Order.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                            <p class="amount">10</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-find-pro">
+                    <input type="search" name="product" placeholder="Tìm kiếm sản phẩm">
+                    <select name="classify" id="classify" class="nor-word">
+                        <option value="" style="display: none;">Phân loại sản phẩm</option>
+                        <option value="thiet-bi-y-te">Thiết bị y tế</option>
+                        <option value="duoc-pham">Dược phẩm</option>
+                        <option value="dung-cu-y-te">Dụng cụ y tế</option>
+                    </select>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="nav-user">
+                    <div class="nav-like-cart">
+                        <a href="#" class="like"><i class="fa-regular fa-heart"></i>
+                            <p class="amount">10</p>
+                        </a>
+                        <a href="Order.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+                            <p class="amount">10</p>
+                        </a>
+                    </div>
+                    <div class="nav-login-resgistor">
+                        <i class="fa-regular fa-user"></i>
+                        <div class="content">
+                            <p class="nor-word">My Account</p>
+                            <div>
+                                <a href="#" class="login nor-word">Đăng nhập</a>
+                                <span>/</span>
+                                <a href="#" class="registor nor-word">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-down" id="sideNav">
+                <div class="logo-close">
+                    <img src="assets/logo-header.png" alt="logo">
+                    <i class="fa-solid fa-xmark close" id="closeBtn"></i>
+                </div>
+                <div class="nav-login-resgistor">
+                    <i class="fa-regular fa-user"></i>
+                    <div class="content">
+                        <p class="nor-word">My Account</p>
+                        <div>
+                            <a href="#" class="login nor-word">Đăng nhập</a>
+                            <span>/</span>
+                            <a href="#" class="registor nor-word">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-category">
+                    <i class="fa-solid fa-list"></i>
+                    <select name="category" id="category-nav" class="nor-word">
+                        <option value="" style="display: none;">Danh mục sản phẩm</option>
+                        <option value="thiet-bi-y-te">Thiết bị y tế</option>
+                        <option value="duoc-pham">Dược phẩm</option>
+                        <option value="dung-cu-y-te">Dụng cụ y tế</option>
+                        <option value="my-pham">Mỹ phẩm</option>
+                        <option value="tp-chuc-nang">TP chức năng</option>
+                        <option value="tp-co-tre-em">TP cho trẻ em</option>
+                    </select>
+                </div>
+                <ul class="nav-function">
+                    <li><a href="index.html" class="nor-word active">Trang Chủ</a></li>
+                    <li><a href="#" class="nor-word">Hoạt Chất</a></li>
+                    <li><a href="#" class="nor-word">Tìm Hiểu Bệnh</a></li>
+                    <li><a href="#" class="nor-word">Về Chúng Tôi</a></li>
+                    <li><a href="#" class="nor-word">Tin Tức</a></li>
+                    <li><a href="Order.html" class="nor-word">Đặt Hàng Nhanh</a></li>
+                    <li><a href="Contact-us-1.html" class="nor-word">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="title-page">
+            <a href="index.html">
+                <h4>Trang chủ</h4>
+            </a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="#">
+                <h4>Danh mục sản phẩm</h4>
+            </a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="#">
+                <h4>Dược phẩm</h4>
+            </a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="#">
+                <h4 class="active">Thuốc xyz</h4>
+            </a>
+        </div>
+        <section class="product-info">
+            <div class="pro-img">
+                <div class="img-column">
+                    <img src="assets/pro-img-1.png" alt="product img 1" class="mini-img active" onclick="showImg('assets/pro-img-1.png', 'product img 1', this)">
+                    <img src="assets/pro-img-2.png" alt="product img 2" class="mini-img" onclick="showImg('assets/pro-img-2.png', 'product img 2', this)">
+                    <img src="assets/pro-img-3.png" alt="product img 3" class="mini-img" onclick="showImg('assets/pro-img-3.png', 'product img 3', this)">
+                    <img src="assets/pro-img-4.png" alt="product img 4" class="mini-img" onclick="showImg('assets/pro-img-4.png', 'product img 4', this)">
+                </div>
+                <div class="img-main">
+                    <img src="assets/pro-img-1.png" alt="main img" id="large-img">
+                </div>
+            </div>
+            <div class="pro-text">
+                <div class="title-icss title-pro-text">
+                    <a href="Product-info.html"><h3>Thông tin sản phẩm</h3></a>
+                    <a href="Product-detail.html"><h3 class="non-active">Chi tiết sản phẩm</h3></a>
+                </div>
+                <div class="pro-text-content">
+                    <p class="nor-word">Dược phẩm</p>
+                    <h2>Fabamox 500mg</h2>
+                    <h4>46.000 VNĐ</h4>
+                    <div class="item-no-1">
+                        <i class="fa-solid fa-check"></i>
+                        <h4>Còn hàng</h4>
+                    </div>
+                    <div class="quantity-control-pro">
+                        <button class="btn-quantity btn-decrease">-</button>
+                        <input type="number" value="1" min="1" id="quantity-pro">
+                        <button class="btn-quantity btn-increase">+</button>
+                    </div>
+                    <div class="cart-like">
+                        <a href="#" class="cart-pro"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="like-pro"><i class="fa-regular fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="other-product">
+            <h3>Sản phẩm khác</h3>
+            <div class="other-pro-list owl-carousel owl-theme">
+                <div class="pro-item-other item my-active">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-1.png" alt="equip-1">
+                        <h4 class="title">Máy đo tai</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro-item-other item">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-2.png" alt="equip-1">
+                        <h4 class="title">Máy nghe nhịp tim</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro-item-other item">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-3.png" alt="equip-1">
+                        <h4 class="title">Máy nghe nhịp tim</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro-item-other item">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-4.png" alt="equip-1">
+                        <h4 class="title">Máy đo số 2</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro-item-other item">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-1.png" alt="equip-1">
+                        <h4 class="title">Máy đo tai</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pro-item-other item">
+                    <a href="#" class="pro-item-content">
+                        <img src="assets/other-pro-5.png" alt="equip-1">
+                        <h4 class="title">Máy nghe nhịp tim</h4>
+                        <div class="price-review-warn">
+                            <div class="price-review">
+                                <div class="review-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="nor-word">500.000 VNĐ</p>
+                            </div>
+                            <div class="warn">
+                                i
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="promotion">
+            <p class="large-word promotion-title">Khuyến Mãi Trong Tháng</p>
+            <div class="promotion-content">
+                <div class="promotion-content-left">
+                    <h3>Khuyến Mãi Khủng Lên Đến Hơn <span>45% !!!</span></h3>
+                    <div class="title-time-out">
+                        <div class="nor-word">Sự kiện sẽ kết thúc trong:</div>
+                        <div class="time-out">
+                            <div class="days">
+                                <p class="large-word days-number">6</p>
+                                <p class="mini-word">DAYS</p>
+                            </div>
+                            <div class="hours">
+                                <p class="large-word hours-number">6</p>
+                                <p class="mini-word">HOURS</p>
+                            </div>
+                            <div class="mins">
+                                <p class="large-word mins-number">6</p>
+                                <p class="mini-word">MINS</p>
+                            </div>
+                            <div class="secs">
+                                <p class="large-word secs-number">6</p>
+                                <p class="mini-word">SECS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"><button class="more nor-word">KHÁM PHÁ THÊM</button></a>
+                </div>
+                <div class="promotion-content-right owl-carousel owl-theme">
+                    <div class="promotion-item item my-active">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-1.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Morphine set</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">500.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="promotion-item item">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-2.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Thuốc tự nhiên đã qua điều chế...</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">500.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="promotion-item item">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-3.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Medical Box Kit</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">500.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="promotion-item item">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-4.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Khẩu trang đen pack (50 cái)</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">500.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="promotion-item item">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-1.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Morphine set</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">500.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="promotion-item item">
+                        <a href="#" class="pro-item-content">
+                            <p class="nor-word item-title">SALE</p>
+                            <img src="assets/promotion-3.png" alt="equip-1">
+                            <div class="price-review-warn">
+                                <h4 class="title">Medical Box Kit</h4>
+                                <div class="price-review">
+                                    <div class="review-star">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="nor-word">302.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="register-now">
+            <div class="register-text">
+                <div class="nor-word">ĐĂNG KÝ ĐỂ NHẬN NGAY NHỮNG ƯU ĐÃI VÀ THÔNG TIN MỚI NHẤT TỪ CHÚNG TÔI</div>
+            </div>
+            <div class="register-form">
+                <input type="email" placeholder="Email Address" class="nor-word">
+                <a href="#"><button>Đăng kí</button></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <a href="index.html" class="icon-footer">
+                <img src="assets/icon-footer.png" alt="icon-footer">
+            </a>
+            <div class="contact-info-aboutus">
+                <div class="contact-info">
+                    <p class="title-footer large-word">Thông tin liên lạc</p>
+                    <ul class="text">
+                        <li><a href="#" class="phone-number large-word">0909 669 420</a></li>
+                        <li><a href="#" class="email-address large-word">Thuocchosi@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="about-us">
+                    <h4>Về chúng tôi</h4>
+                    <h4>Công Ty TNHH Thương Mại XYZ</h4>
+                    <h4>Địa chỉ: 48 Nguyễn Văn Quá, phường 3, Quận Gò Vấp, Tp HCM.</h4>
+                </div>
+            </div>
+            <div class="policy-security">
+                <p class="title-footer large-word">Chính sách và bảo mật</p>
+                <ul class="text">
+                    <li><a href="#">
+                            <h4>FAQS</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Điều khoản sử dụng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách giao hàng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách hoàn trả</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách bảo mật</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Chính sách người dùng</h4>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>Theo dõi đơn hàng</h4>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="payment-footer">
+                <p class="title-footer large-word">Phương thức thanh toán</p>
+                <div class="image-footer-payment">
+                    <img src="assets/visa.png" alt="visa">
+                    <img src="assets/mastercard.png" alt="mastercard">
+                    <img src="assets/googlepay.png" alt="googlepay">
+                    <img src="assets/paypal.png" alt="paypal">
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -624,19 +624,19 @@
         </section>
         <section class="info">
             <div class="text-info">
-                <h2>1118</h2>
+                <h2 class="info-num">1118</h2>
                 <h3>Loại thuốc</h3>
             </div>
             <div class="text-info">
-                <h2>69</h2>
+                <h2 class="info-num">69</h2>
                 <h3>Nhà phân phối</h3>
             </div>
             <div class="text-info">
-                <h2>6900</h2>
+                <h2 class="info-num">6900</h2>
                 <h3>Khách hàng tin tưởng</h3>
             </div>
             <div class="text-info">
-                <h2>10</h2>
+                <h2 class="info-num">10</h2>
                 <h3>Bằng chứng nhận</h3>
             </div>
         </section>
@@ -899,6 +899,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        console.log('Test mã');
+            const counters = document.querySelectorAll('.info-num');
+            console.log('Tìm thấy:', counters.length);
+            counters.forEach(counter => {
+                const targetValue = parseInt(counter.textContent);
+                console.log('Đếm:', targetValue);
+                counter.textContent = '0';
+                let currentValue = 0;
+                const increment = targetValue / 120; // 120 khung hình trong 2 giây
+                const interval = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= targetValue) {
+                        currentValue = targetValue;
+                        clearInterval(interval);
+                    }
+                    counter.textContent = Math.floor(currentValue);
+                }, 16);
+            });
+    </script>
     
 </body>
 </html>

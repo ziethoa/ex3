@@ -126,15 +126,15 @@
                     </div>
                     <div class="payment-option">
                         <input type="radio" id="momo" value="momo" name="payment-method">
-                        <label for="cod">Thanh toán qua ví Momo</label>
+                        <label for="momo">Thanh toán qua ví Momo</label>
                     </div>
                     <div class="payment-option">
                         <input type="radio" id="atm" value="atm" name="payment-method">
-                        <label for="cod">Thanh toán qua ATM nội địa</label>
+                        <label for="atm">Thanh toán qua ATM nội địa</label>
                     </div>
                     <div class="payment-option">
                         <input type="radio" id="visa" value="visa" name="payment-method">
-                        <label for="cod">Thanh toán qua Visa/Master Card/JCB</label>
+                        <label for="visa">Thanh toán qua Visa/Master Card/JCB</label>
                     </div>
                 </div>
                 <div class="btn-list-payment">
@@ -255,6 +255,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.payment-option').forEach(function (option) {
+            option.addEventListener('click', function () {
+                const input = option.querySelector('input[type="radio"]');
+                input.checked = true;
+            });
+        });
+    </script>
 
 </body>
 

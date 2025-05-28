@@ -26,139 +26,106 @@ function navbarResponsive() {
 
 document.addEventListener('DOMContentLoaded', navbarResponsive)
 
-// hàm carousel
 $(document).ready(function () {
-  // Hàm cập nhật class my-active
-  function updateActiveItem(carouselSelector, itemSelector) {
-    // Xóa class my-active khỏi tất cả items trong carousel hiện tại
-    $(carouselSelector).find(itemSelector).removeClass('my-active');
-    
-    // Tìm item đầu tiên trong viewport của carousel hiện tại
-    const firstActiveItem = $(carouselSelector).find('.owl-item.active').first().find(itemSelector);
-    
-    if (firstActiveItem.length) {
-      firstActiveItem.addClass('my-active');
-      console.log('Added .my-active to:', firstActiveItem, 'Text:', firstActiveItem.find('.large-word').text(), 'Is cloned:', firstActiveItem.closest('.owl-item').hasClass('cloned'));
-    } else {
-      console.log('No valid active item found for selector:', itemSelector, 'in carousel:', carouselSelector);
-    }
-  }
-
-  // Khởi tạo Owl Carousel
+  // Khởi tạo Owl Carousel cho pro-list-me-content
   $('.pro-list-me-content').owlCarousel({
     items: 6,
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true,
     responsive: {
-      0: {items: 1},
-      450: {items: 2},
-      650: {items: 3},
-      1270: {items: 4},
+      0: { items: 1 },
+      450: { items: 2 },
+      650: { items: 3 },
+      1270: { items: 4 },
       1800: { items: 5 },
-      2400: { items: 6}
+      2400: { items: 6 }
     }
   });
-  
-  // Gắn sự kiện translated.owl.carousel cho carousel 1
-  $('.pro-list-me-content').on('translated.owl.carousel', function (event) {
-    updateActiveItem('.pro-list-me-content', '.pro-item-me');
-  });
 
-
+  // Khởi tạo Owl Carousel cho pro-list-drug-content
   $('.pro-list-drug-content').owlCarousel({
     items: 6,
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true,
     responsive: {
-      0: {items: 1},
-      450: {items: 2},
-      650: {items: 3},
-      1270: {items: 4},
+      0: { items: 1 },
+      450: { items: 2 },
+      650: { items: 3 },
+      1270: { items: 4 },
       1800: { items: 5 },
-      2400: { items: 6}
-      }
+      2400: { items: 6 }
+    }
   });
 
-  // Gắn sự kiện translated.owl.carousel cho carousel 2
-  $('.pro-list-drug-content').on('translated.owl.carousel', function (event) {
-    updateActiveItem('.pro-list-drug-content', '.pro-item-drug');
-  });
-
+  // Khởi tạo Owl Carousel cho pro-list-me-sp-content
   $('.pro-list-me-sp-content').owlCarousel({
     items: 6,
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true,
     responsive: {
-      0: {items: 1},
-      450: {items: 2},
-      650: {items: 3},
-      1270: {items: 4},
+      0: { items: 1 },
+      450: { items: 2 },
+      650: { items: 3 },
+      1270: { items: 4 },
       1800: { items: 5 },
-      2400: { items: 6}
-      }
+      2400: { items: 6 }
+    }
   });
 
-  // Cập nhật class my-active khi carousel chuyển động (next/prev)
-  $('.pro-list-me-sp-content').on('translated.owl.carousel', function (event) {
-    updateActiveItem('.pro-list-me-sp-content', '.pro-item-me-sp');
-  });
-
+  // Khởi tạo Owl Carousel cho promotion-content-right
   $('.promotion-content-right').owlCarousel({
     items: 6,
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true,
     responsive: {
-      0: {items: 1},
-      450: {items: 2},
-      650: {items: 3},
-      1270: {items: 4},
+      0: { items: 1 },
+      450: { items: 2 },
+      650: { items: 3 },
+      1270: { items: 4 },
       1800: { items: 5 },
-      2400: { items: 6}
-      }
+      2400: { items: 6 }
+    }
   });
 
-  // Cập nhật class my-active khi carousel chuyển động (next/prev)
-  $('.promotion-content-right').on('translated.owl.carousel', function (event) {
-    updateActiveItem('.promotion-content-right', '.promotion-item');
-  });
-
+  // Khởi tạo Owl Carousel cho other-pro-list
   $('.other-pro-list').owlCarousel({
     items: 6,
     loop: true,
     margin: 10,
     nav: true,
     dots: false,
+    autoplay: true,
+    autoplayTimeout: 1500,
+    autoplayHoverPause: true,
     responsive: {
       0: { items: 1 },
       380: { items: 2 },
-      650: {items: 3 },
+      650: { items: 3 },
       991: { items: 4 },
       1280: { items: 5 },
       1800: { items: 6 }
     }
   });
-$('.other-pro-list').on('translated.owl.carousel', function (event) {
-    updateActiveItem('.other-pro-list', '.pro-item-other');
-  });
-
-
-  // Gọi hàm ngay sau khi khởi tạo để thêm my-active ban đầu
-  setTimeout(function () {
-    updateActiveItem('.pro-list-me-content', '.pro-item-me');
-    updateActiveItem('.pro-list-drug-content', '.pro-item-drug');
-    updateActiveItem('.pro-list-me-sp-content', '.pro-item-me-sp');
-    updateActiveItem('.pro-list-me-sp-content', '.promotion-item');
-    updateActiveItem('.other-pro-list', '.pro-item-other');
-  }, 100); // Thêm độ trễ nhỏ cho lần khởi tạo ban đầu
-
 });
 
 // bộ đếm thời gian
@@ -480,3 +447,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+function likeActive() {
+  const like = document.querySelector('.like-pro');
+  const likeNormal = document.querySelector('.like-normal');
+  const liked = document.querySelector('.liked');
+
+  like.addEventListener('click',() => {
+    likeNormal.classList.toggle('active');
+    liked.classList.toggle('active');
+  })
+
+}
+
+document.addEventListener('DOMContentLoaded', likeActive());
+
+function proInfoDetail() {
+  const title1 = document.querySelector('.title-text-1');
+  const title2 = document.querySelector('.title-text-2');
+  const contentInfo = document.querySelector('.product-info-content');
+  const contentDetail = document.querySelector('.pro-detail');
+  
+  title2.addEventListener('click', () => {
+    contentInfo.classList.remove('active');
+    contentDetail.classList.add('active');
+    title2.classList.add('active');
+    title1.classList.remove('active');
+  })
+
+  title1.addEventListener('click', () => {
+    contentInfo.classList.add('active');
+    contentDetail.classList.remove('active');
+    title1.classList.add('active');
+    title2.classList.remove('active');
+  })
+
+}
+
+document.addEventListener('DOMContentLoaded', proInfoDetail());
+
+
